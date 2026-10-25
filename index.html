@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumen CSS — a tiny classless CSS framework</title>
+  <meta name="description" content="Lumen is a tiny, beautiful, classless CSS framework. Write semantic HTML and it just looks great.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;750&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="lumen.css">
+  <style>
+    /* Site-only tweaks (the framework itself needs none of this) */
+    :root { --font: "Inter", ui-sans-serif, system-ui, sans-serif; --mono: "JetBrains Mono", ui-monospace, monospace; }
+    pre { position: relative; }
+    pre button { position: absolute; top: .6rem; right: .6rem; padding: .35rem .75rem; font-size: .8rem; }
+    details pre { margin-top: .5rem; }
+    .demo-box { padding: 1.5rem; border: 1px dashed var(--border); border-radius: var(--radius); background: var(--bg); }
+    .demo-box form { max-width: 28rem; }
+    header p[role], header nav + h1 { margin-top: 1.5rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="#install" aria-current="page">Install</a></li>
+      <li><a href="#layout">Layout</a></li>
+      <li><a href="#typography">Typography</a></li>
+      <li><a href="#forms">Forms</a></li>
+      <li><a href="#buttons">Buttons</a></li>
+      <li><a href="https://github.com/7AS1N/Lumen">GitHub</a></li>
+    </ul>
+  </nav>
+  <h1>Lumen</h1>
+  <p>A tiny, beautiful, classless CSS framework. Write semantic HTML and it just looks great. No classes, no JavaScript, no build step.</p>
+  <p>
+    <a role="button" href="#install">Get started</a>
+    <a role="button" href="https://github.com/7AS1N/Lumen">View on GitHub</a>
+  </p>
+</header>
+
+<main>
+  <div>
+
+    <section id="install">
+      <h2>Install</h2>
+      <p>Add one line to your <code>&lt;head&gt;</code>. That's it.</p>
+
+      <h3>CDN</h3>
+      <pre><button type="button" data-copy>Copy</button><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/7AS1N/Lumen/lumen.css"&gt;</code></pre>
+
+      <h3>Download</h3>
+      <p>Grab <a href="https://github.com/7AS1N/Lumen/blob/main/lumen.css"><code>lumen.css</code></a> from the repo, drop it in your project and link it:</p>
+      <pre><button type="button" data-copy>Copy</button><code>&lt;link rel="stylesheet" href="lumen.css"&gt;</code></pre>
+
+      <h3>Starter template</h3>
+      <pre><button type="button" data-copy>Copy</button><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;My site&lt;/title&gt;
+  &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/7AS1N/Lumen/lumen.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;&lt;h1&gt;Hello&lt;/h1&gt;&lt;/header&gt;
+  &lt;main&gt;&lt;p&gt;Styled with zero classes.&lt;/p&gt;&lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </section>
+
+    <section id="layout">
+      <h2>Layout</h2>
+      <p>A <code>section</code> that contains <code>article</code>s becomes a responsive auto-fit grid. An <code>aside</code> beside your content becomes a sticky sidebar. Resize this window to watch it flow.</p>
+      <article>
+        <h3>Classless</h3>
+        <p>Elements are styled by what they are.</p>
+      </article>
+      <article>
+        <h3>Lightweight</h3>
+        <p>One small stylesheet and nothing else.</p>
+      </article>
+      <article>
+        <h3>Dark mode</h3>
+        <p>Follows your system theme automatically.</p>
+      </article>
+      <details>
+        <summary>View code</summary>
+        <pre><button type="button" data-copy>Copy</button><code>&lt;section&gt;
+  &lt;article&gt;&lt;h3&gt;Classless&lt;/h3&gt;&lt;p&gt;...&lt;/p&gt;&lt;/article&gt;
+  &lt;article&gt;&lt;h3&gt;Lightweight&lt;/h3&gt;&lt;p&gt;...&lt;/p&gt;&lt;/article&gt;
+  &lt;article&gt;&lt;h3&gt;Dark mode&lt;/h3&gt;&lt;p&gt;...&lt;/p&gt;&lt;/article&gt;
+&lt;/section&gt;</code></pre>
+      </details>
+    </section>
+
+    <section id="typography">
+      <h2>Typography</h2>
+      <div class="demo-box">
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p>Paragraphs get a comfortable measure and line height, with <a href="#typography">links</a>, <strong>bold</strong>, <mark>highlights</mark> and <code>inline code</code> all styled.</p>
+        <blockquote>Simplicity is the ultimate sophistication.</blockquote>
+        <ul>
+          <li>Unordered list item</li>
+          <li>Another item</li>
+        </ul>
+      </div>
+      <details>
+        <summary>View code</summary>
+        <pre><button type="button" data-copy>Copy</button><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;p&gt;A paragraph with &lt;a href="#"&gt;a link&lt;/a&gt; and &lt;mark&gt;highlight&lt;/mark&gt;.&lt;/p&gt;
+&lt;blockquote&gt;A quote.&lt;/blockquote&gt;</code></pre>
+      </details>
+    </section>
+
+    <section id="forms">
+      <h2>Forms</h2>
+      <p>Wrap controls in a <code>label</code> and a <code>form</code>. Text inputs, textarea, select, checkbox and radio are all styled.</p>
+      <div class="demo-box">
+        <form onsubmit="return false">
+          <label>Name
+            <input type="text" placeholder="Ada Lovelace">
+          </label>
+          <label>Email
+            <input type="email" placeholder="ada@example.com" required>
+          </label>
+          <label>Topic
+            <select>
+              <option>General question</option>
+              <option>Bug report</option>
+              <option>Feature request</option>
+            </select>
+          </label>
+          <label>Message
+            <textarea placeholder="Say something nice..."></textarea>
+          </label>
+          <fieldset>
+            <legend>Preferences</legend>
+            <label><input type="checkbox" checked> Email me updates</label>
+            <label><input type="checkbox"> Subscribe to the newsletter</label>
+          </fieldset>
+          <fieldset>
+            <legend>Plan</legend>
+            <label><input type="radio" name="plan" checked> Free</label>
+            <label><input type="radio" name="plan"> Pro</label>
+            <label><input type="radio" name="plan"> Team</label>
+          </fieldset>
+          <p>
+            <button type="submit">Send message</button>
+            <button type="reset">Reset</button>
+          </p>
+        </form>
+      </div>
+      <details>
+        <summary>View code</summary>
+        <pre><button type="button" data-copy>Copy</button><code>&lt;form&gt;
+  &lt;label&gt;Email
+    &lt;input type="email" placeholder="ada@example.com"&gt;
+  &lt;/label&gt;
+
+  &lt;label&gt;Topic
+    &lt;select&gt;
+      &lt;option&gt;General question&lt;/option&gt;
+      &lt;option&gt;Bug report&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/label&gt;
+
+  &lt;label&gt;Message
+    &lt;textarea&gt;&lt;/textarea&gt;
+  &lt;/label&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;Preferences&lt;/legend&gt;
+    &lt;label&gt;&lt;input type="checkbox"&gt; Email me updates&lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="plan"&gt; Free&lt;/label&gt;
+  &lt;/fieldset&gt;
+
+  &lt;p&gt;
+    &lt;button type="submit"&gt;Send&lt;/button&gt;
+    &lt;button type="reset"&gt;Reset&lt;/button&gt;
+  &lt;/p&gt;
+&lt;/form&gt;</code></pre>
+      </details>
+    </section>
+
+    <section id="buttons">
+      <h2>Buttons</h2>
+      <p>Submit buttons are filled with a gradient. <code>type="button"</code> and <code>type="reset"</code> become outlined. Use <code>role="button"</code> on a link to make it look like a button.</p>
+      <div class="demo-box">
+        <p>
+          <button>Primary</button>
+          <button type="button">Secondary</button>
+          <a role="button" href="#buttons">Link button</a>
+          <button disabled>Disabled</button>
+        </p>
+      </div>
+      <details>
+        <summary>View code</summary>
+        <pre><button type="button" data-copy>Copy</button><code>&lt;button&gt;Primary&lt;/button&gt;
+&lt;button type="button"&gt;Secondary&lt;/button&gt;
+&lt;a role="button" href="#"&gt;Link button&lt;/a&gt;
+&lt;button disabled&gt;Disabled&lt;/button&gt;</code></pre>
+      </details>
+    </section>
+
+  </div>
+
+  <aside>
+    <h4>On this page</h4>
+    <nav>
+      <ul>
+        <li><a href="#install">Install</a></li>
+        <li><a href="#layout">Layout</a></li>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+      </ul>
+    </nav>
+    <hr>
+    <p><small>Customize colors, radius, width and fonts with CSS variables like <code>--accent</code> and <code>--radius</code>.</small></p>
+  </aside>
+</main>
+
+<footer><a href="https://github.com/7AS1N/Lumen">Lumen CSS</a> · MIT License</footer>
+
+<script>
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var code = btn.parentElement.querySelector('code').innerText;
+      navigator.clipboard.writeText(code).then(function () {
+        btn.textContent = 'Copied!';
+        setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+      });
+    });
+  });
+</script>
+</body>
+</html>
