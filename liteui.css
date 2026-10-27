@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --primary: #7C3AED;
+  --secondary: #925bf0;
+  --border: #8b8b8b;
+  --radius: 4px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  color: #1a1a1a;
+}
+
+body {
+  padding: 25px;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 22px 0 6px;
+}
+
+h1 { font-size: 26px; }
+h2 { font-size: 24px; }
+h3 { font-size: 22px; }
+h4 { font-size: 20px; }
+h5 { font-size: 18px; }
+h6 { font-size: 17px; }
+
+p {
+  margin: 0 0 6px;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+button {
+  padding: 7px 15px;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: var(--secondary);
+}
+
+input,
+textarea,
+select {
+  padding: 5px 12px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  display: block;
+  margin: 6px 0;
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: inline-block;
+  margin: 0 4px 0 0;
+  padding: 0;
+  accent-color: var(--primary);
+  vertical-align: middle;
+}
+
+label {
+  display: inline;
+}
+
+
+select {
+  min-width: 80px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  border-bottom: 2px solid var(--border);
+}
+
+tr {
+    text-align: left;
+}
+
+td {
+  border-bottom: 1px solid var(--border);
+  padding: 5px 0;
+}
