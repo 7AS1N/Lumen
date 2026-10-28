@@ -3,22 +3,84 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lumen CSS — a tiny classless CSS framework</title>
-  <meta name="description" content="Lumen is a tiny, beautiful, classless CSS framework. Write semantic HTML and it just looks great.">
+  <title>Lumen CSS – Lightweight, Classless CSS Framework</title>
+  <meta name="description" content="Lumen is a lightweight, classless CSS framework. Write semantic HTML, get responsive, dark-mode-ready pages. About 4 KB gzipped, no build step.">
+  <link rel="canonical" href="https://7as1n.github.io/Lumen/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="7AS1N">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fafaff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f0e1a" media="(prefers-color-scheme: dark)">
+
+  <!-- Icons -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Open Graph (Facebook, LinkedIn, Discord, Slack...) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lumen CSS">
+  <meta property="og:title" content="Lumen CSS – Lightweight, Classless CSS Framework">
+  <meta property="og:description" content="Write semantic HTML and get a modern, responsive, dark-mode-ready design. About 4 KB gzipped, no classes, no build step.">
+  <meta property="og:url" content="https://7as1n.github.io/Lumen/">
+  <meta property="og:image" content="https://7as1n.github.io/Lumen/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Lumen CSS, a lightweight classless CSS framework with dark mode">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lumen CSS – Lightweight, Classless CSS Framework">
+  <meta name="twitter:description" content="Write semantic HTML and get a modern, responsive, dark-mode-ready design. About 4 KB gzipped, no classes, no build step.">
+  <meta name="twitter:image" content="https://7as1n.github.io/Lumen/og-image.png">
+  <meta name="twitter:image:alt" content="Lumen CSS, a lightweight classless CSS framework with dark mode">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;750&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/7AS1N/Lumen/lumen.css">
+  <script src="https://cdn.jsdelivr.net/gh/7AS1N/Lumen/lumen-theme.js"></script>
   <style>
     /* Site-only tweaks (the framework itself needs none of this) */
     :root { --font: "Inter", ui-sans-serif, system-ui, sans-serif; --mono: "JetBrains Mono", ui-monospace, monospace; }
     pre { position: relative; }
-    pre button { position: absolute; top: .6rem; right: .6rem; padding: .35rem .75rem; font-size: .8rem; }
+    pre button { position: absolute; top: .6rem; right: .6rem; width: auto; padding: .35rem .75rem; font-size: .8rem; }
     details pre { margin-top: .5rem; }
     .demo-box { padding: 1.5rem; border: 1px dashed var(--border); border-radius: var(--radius); background: var(--bg); }
     .demo-box form { max-width: 28rem; }
     header p[role], header nav + h1 { margin-top: 1.5rem; }
   </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://7as1n.github.io/Lumen/#website",
+        "url": "https://7as1n.github.io/Lumen/",
+        "name": "Lumen CSS",
+        "description": "Lumen is a lightweight, classless CSS framework with dark mode. Write semantic HTML and get responsive, modern pages with no classes and no build step.",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://7as1n.github.io/Lumen/#software",
+        "name": "Lumen CSS",
+        "description": "A lightweight, classless, responsive CSS framework with built-in dark mode, forms, tables, buttons, an auto-fit card grid and one-variable theming.",
+        "url": "https://7as1n.github.io/Lumen/",
+        "image": "https://7as1n.github.io/Lumen/og-image.png",
+        "codeRepository": "https://github.com/7AS1N/Lumen",
+        "programmingLanguage": "CSS",
+        "license": "https://opensource.org/licenses/MIT",
+        "author": { "@type": "Person", "name": "7AS1N", "url": "https://github.com/7AS1N" },
+        "isPartOf": { "@id": "https://7as1n.github.io/Lumen/#website" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -30,12 +92,15 @@
       <li><a href="#typography">Typography</a></li>
       <li><a href="#forms">Forms</a></li>
       <li><a href="#buttons">Buttons</a></li>
+      <li><a href="#theming">Theming</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="https://github.com/7AS1N/Lumen">GitHub</a></li>
+      <li><button data-theme-toggle></button></li>
     </ul>
   </nav>
-  <h1>Lumen</h1>
-  <p>A tiny, beautiful, classless CSS framework. Write semantic HTML and it just looks great. No classes, no JavaScript, no build step.</p>
+  <h1>Lumen CSS</h1>
+  <p>A lightweight, classless CSS framework. Write semantic HTML and it just looks great, in light and dark mode. No classes, no build step, and the core needs no JavaScript.</p>
   <p>
     <a role="button" href="#install">Get started</a>
     <a role="button" href="https://github.com/7AS1N/Lumen">View on GitHub</a>
@@ -44,6 +109,35 @@
 
 <main>
   <div>
+
+    <section id="features">
+      <h2>Why Lumen?</h2>
+      <p>Lumen is a modern, lightweight CSS framework for developers who want a good-looking page without learning class names. Link one stylesheet and style plain HTML for landing pages, docs, blogs and web panels.</p>
+      <article>
+        <h3>Classless by design</h3>
+        <p>Headings, lists, tables, forms, buttons and code blocks look good without a single class.</p>
+      </article>
+      <article>
+        <h3>Tiny footprint</h3>
+        <p>One stylesheet of about 4 KB gzipped. No dependencies, no build step, no JavaScript required.</p>
+      </article>
+      <article>
+        <h3>Dark mode built in</h3>
+        <p>Follows the system theme automatically, with an optional one-line theme switch for visitors.</p>
+      </article>
+      <article>
+        <h3>Responsive out of the box</h3>
+        <p>Fluid typography, an auto-fit card grid and scrollable tables work on every screen size.</p>
+      </article>
+      <article>
+        <h3>Easy theming</h3>
+        <p>Change one CSS variable and the tints, glows, focus rings and gradients follow.</p>
+      </article>
+      <article>
+        <h3>Polished components</h3>
+        <p>Forms, buttons, navigation, tables, images, video and code blocks are ready for real projects.</p>
+      </article>
+    </section>
 
     <section id="install">
       <h2>Install</h2>
@@ -85,7 +179,7 @@
       </article>
       <article>
         <h3>Dark mode</h3>
-        <p>Follows your system theme automatically.</p>
+        <p>Follows your system theme, with an optional one-line switch.</p>
       </article>
       <details>
         <summary>View code</summary>
@@ -212,13 +306,100 @@
       </details>
     </section>
 
+    <section id="theming">
+      <h2>Theming</h2>
+      <p>Every color is a CSS variable. Tints, glows, focus rings and the select arrow are all derived from <code>--accent</code>, so changing it re-themes everything. Try it:</p>
+      <div class="demo-box">
+        <form onsubmit="return false">
+          <label>Accent
+            <input type="color" id="pick-accent" value="#6d5dfc">
+          </label>
+          <label>Accent 2 (gradient end)
+            <input type="color" id="pick-accent-2" value="#b25dfc">
+          </label>
+          <p><button type="button" id="pick-reset">Reset</button></p>
+        </form>
+      </div>
+
+      <h3>Change the accent</h3>
+      <p>Override the variables after the stylesheet. One color works for both themes, or use <code>light-dark()</code> to give each theme its own.</p>
+      <pre><button type="button" data-copy>Copy</button><code>:root {
+  --accent: #0ea5e9;
+  --accent-2: #22d3ee;
+
+  /* or a separate color for light and dark */
+  --accent: light-dark(#0ea5e9, #38bdf8);
+}</code></pre>
+
+      <h3>Add a theme switch</h3>
+      <p>The framework follows the system theme by default. To let visitors switch, add the optional script in your <code>&lt;head&gt;</code> and drop a button anywhere. It fills itself with a sun or moon icon and remembers the choice.</p>
+      <pre><button type="button" data-copy>Copy</button><code>&lt;script src="https://cdn.jsdelivr.net/gh/7AS1N/Lumen/lumen-theme.js"&gt;&lt;/script&gt;
+
+&lt;button data-theme-toggle&gt;&lt;/button&gt;</code></pre>
+      <p>No JavaScript? Force a theme with <code>&lt;html data-theme="dark"&gt;</code> or <code>data-theme="light"</code>.</p>
+    </section>
+
+    <section id="faq">
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>What is a classless CSS framework?</summary>
+        <p>A classless CSS framework styles standard HTML elements directly, so you never add class names. Write semantic HTML such as <code>&lt;h1&gt;</code>, <code>&lt;form&gt;</code> and <code>&lt;table&gt;</code> and it is styled automatically.</p>
+      </details>
+      <details>
+        <summary>How big is Lumen?</summary>
+        <p>The stylesheet is about 15 KB unminified and about 4.4 KB gzipped, with no dependencies. The optional theme switch script adds about 1.2 KB gzipped.</p>
+      </details>
+      <details>
+        <summary>How do I install Lumen?</summary>
+        <p>Add one <code>&lt;link&gt;</code> tag to your <code>&lt;head&gt;</code> from the jsDelivr CDN, or download <code>lumen.css</code> and link it locally. See <a href="#install">Install</a> for the code.</p>
+      </details>
+      <details>
+        <summary>Does Lumen support dark mode?</summary>
+        <p>Yes. Lumen follows the visitor's system theme automatically. You can also force a theme with <code>data-theme</code> or add a theme switch button with one script. See <a href="#theming">Theming</a>.</p>
+      </details>
+      <details>
+        <summary>Do I need JavaScript or a build step?</summary>
+        <p>No. Lumen is a single CSS file. The theme switch script is optional, and there is nothing to compile or install.</p>
+      </details>
+      <details>
+        <summary>How is Lumen different from other lightweight CSS frameworks?</summary>
+        <p>Like Water.css, Sakura and Simple.css, Lumen is classless. It also turns a section of articles into a responsive card grid and includes polished form controls, tables, buttons and one-variable theming, which suits landing pages and web panels. Unlike class-based frameworks such as Pure.css or Bootstrap, you do not need to learn or write class names.</p>
+      </details>
+      <details>
+        <summary>Which browsers does Lumen support?</summary>
+        <p>Lumen targets modern browsers: Chrome and Edge 123+, Firefox 121+ and Safari 17.5+. It uses <code>:has()</code>, <code>color-mix()</code> and <code>light-dark()</code>.</p>
+      </details>
+      <details>
+        <summary>Is Lumen free to use?</summary>
+        <p>Yes. Lumen is open source under the MIT license, so you can use it in personal and commercial projects.</p>
+      </details>
+    </section>
+
   </div>
   
 </main>
 
-<footer><a href="https://github.com/7AS1N/Lumen">Lumen CSS</a> · MIT License</footer>
+<footer><a href="https://github.com/7AS1N/Lumen">Lumen CSS</a> · A lightweight, classless CSS framework · MIT License · <a href="blog.html">Example blog page</a></footer>
 
 <script>
+  // Live accent pickers for the Theming demo
+  (function () {
+    var root = document.documentElement;
+    function bind(id, prop) {
+      document.getElementById(id).addEventListener('input', function (e) {
+        root.style.setProperty(prop, e.target.value);
+      });
+    }
+    bind('pick-accent', '--accent');
+    bind('pick-accent-2', '--accent-2');
+    document.getElementById('pick-reset').addEventListener('click', function () {
+      root.style.removeProperty('--accent');
+      root.style.removeProperty('--accent-2');
+      document.getElementById('pick-accent').value = '#6d5dfc';
+      document.getElementById('pick-accent-2').value = '#b25dfc';
+    });
+  })();
+
   document.querySelectorAll('[data-copy]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var code = btn.parentElement.querySelector('code').innerText;
