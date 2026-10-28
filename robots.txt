@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://7as1n.github.io/Lumen/sitemap.xml
